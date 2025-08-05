@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Users/courage/OneDrive/Documents/IMPORTANT/CODE/encrypted/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe  @CMakeFiles/DES.dir/includes_CXX.rsp -g -std=gnu++17 -O2 -DNDEBUG -Wall -Wextra -o CMakeFiles\\DES.dir\\main.cpp.obj -c C:\\Users\\courage\\OneDrive\\Documents\\IMPORTANT\\CODE\\encrypted\\main.cpp",
+  "file": "C:/Users/courage/OneDrive/Documents/IMPORTANT/CODE/encrypted/main.cpp",
+  "output": "CMakeFiles/DES.dir/main.cpp.obj"
+}
+]
