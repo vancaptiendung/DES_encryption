@@ -39,14 +39,23 @@ uint64_t permutationC1(uint64_t data, int collum, int row, int real_collum, int 
     return outdata;
 }
 
-uint64_t permutationC2(uint64_t data, int* lock, int length_lock){
+uint64_t permutationC2(uint64_t data, int* lock, int length_lock, int length_data){
     uint64_t outdata = 0;
     for (int i = 0; i < length_lock; i++){
         outdata <<= 1;
-        outdata += checkNb(data, lock[i] - 1, 56);
+        outdata += checkNb(data, lock[i] - 1, length_data);
         // std::cout<< checkNb(data, lock[i] - 1, 56) << "  ";
     }
     return outdata;
 }
 
+uint32_t permutationC2_32bit(uint32_t data, int* lock, int length_lock, int length_data){
+    uint32_t outdata = 0;
+    for (int i = 0; i < length_lock; i++){
+        outdata <<= 1;
+        outdata += checkNb(data, lock[i] - 1, length_data);
+        // std::cout<< checkNb(data, lock[i] - 1, 56) << "  ";
+    }
+    return outdata;
+}
 #endif
