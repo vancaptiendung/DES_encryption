@@ -83,7 +83,7 @@ uint64_t Des_encryption(uint64_t M){
     // std::cout<< R_before<<std::endl;
 
     // std::cout<< K_list[0] <<std::endl;
-    // std::cout<< (F_function(R_before, K_list[0]) ^ L_before) <<std::endl;
+    // std::cout<< (F_function(171426665, K_list[11]) ^ 1008904651) <<std::endl;
     for (int i = 0; i < 16; i ++){
         // std::cout<< K_list[i] <<std::endl;
         uint32_t R_new = F_function(R_before, K_list[i]) ^ L_before;
@@ -107,19 +107,20 @@ int main(){
     // for (int i = 0; i < number_char; i++){
     //     std::cout<< int(plant_text[i]) << std::endl;
     // }
-    // std::cout<< Des_encryption(0b0000000100100011010001010110011110001001101010111100110111101111)<<std::endl ;
-    std::cout<< "Encrypted text: ";
-    for (int i = 0; i < number_char; i++){
-        int num = int(plant_text[i]);
-        translate_text <<= 8;
-        translate_text += num;
-        cout_char ++;
-        if (cout_char == 8 || i + 1 == number_char){
-            std::cout<< std::hex << Des_encryption(translate_text) ;
-            cout_char = 0;
-            translate_text = 0;
-        }
-    }
+    std::cout<< std::hex<< Des_encryption(0b0000000100100011010001010110011110001001101010111100110111101111)<<std::endl ;
+    
+    // std::cout<< "Encrypted text: ";
+    // for (int i = 0; i < number_char; i++){
+    //     int num = int(plant_text[i]);
+    //     translate_text <<= 8;
+    //     translate_text += num;
+    //     cout_char ++;
+    //     if (cout_char == 8 || i + 1 == number_char){
+    //         std::cout<< std::hex << Des_encryption(translate_text) ;
+    //         cout_char = 0;
+    //         translate_text = 0;
+    //     }
+    // }
     std::cout<< std::endl;
     
 }
