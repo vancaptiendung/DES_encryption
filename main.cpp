@@ -107,20 +107,20 @@ int main(){
     // for (int i = 0; i < number_char; i++){
     //     std::cout<< int(plant_text[i]) << std::endl;
     // }
-    std::cout<< std::hex<< Des_encryption(0b0000000100100011010001010110011110001001101010111100110111101111)<<std::endl ;
+    // std::cout<< std::hex<< Des_encryption(0b0000000100100011010001010110011110001001101010111100110111101111)<<std::endl ;
     
-    // std::cout<< "Encrypted text: ";
-    // for (int i = 0; i < number_char; i++){
-    //     int num = int(plant_text[i]);
-    //     translate_text <<= 8;
-    //     translate_text += num;
-    //     cout_char ++;
-    //     if (cout_char == 8 || i + 1 == number_char){
-    //         std::cout<< std::hex << Des_encryption(translate_text) ;
-    //         cout_char = 0;
-    //         translate_text = 0;
-    //     }
-    // }
+    std::cout<< "Encrypted text: ";
+    for (int i = 0; i < number_char; i++){
+        int num = int(plant_text[i]);
+        translate_text <<= 8;
+        translate_text += num;
+        cout_char ++;
+        if (cout_char == 8 || i + 1 == number_char){
+            std::cout<< std::hex << Des_encryption(translate_text) ;
+            cout_char = 0;
+            translate_text = 0;
+        }
+    }
     std::cout<< std::endl;
     
 }
